@@ -1,0 +1,49 @@
+{% extends 'nav.html' %}
+{% block content %}
+   <div class="container">
+<div class="jumbotron">
+    <h1 class="display-4"><h2>नमस्कार</h2></h1>
+
+    <hr class="my-4">
+  <h5>नविन ऑर्डर</h5>
+
+
+
+        <a class="btn btn-primary btn-lg" href="{% url 'newu' %} " role="button"> नवीन  ग्राहक</a>
+    <div id="juna">
+        <form class="form-inline my-2 my-lg-0" >
+      <input class="form-control mr-sm-2" type="search" placeholder="firstname">
+            <input class="form-control mr-sm-2" type="search" placeholder="lastname">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+        </div>
+  </div>
+   <h1>list</h1>
+     <table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+
+        <th scope="col">नाव </th>
+        <th scope="col">आडनाव </th>
+        <th scope="col">स्तिथी </th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for i in obj %}
+        <tr>
+
+            <td>{{i.name}}</td>
+            <td>{{i.lname}}</td>
+            <td>  <a  href="{% url 'completeup' pk=i.id %}" class="btn btn-primary btn-lg"  role="button">
+                तयार झाली</a> </td>
+          </tr>
+    {% endfor %}
+
+
+    </tbody>
+  </table>
+       </div>
+
+
+
+{% endblock %}

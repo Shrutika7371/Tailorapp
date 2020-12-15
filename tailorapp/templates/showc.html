@@ -1,0 +1,145 @@
+
+{% extends 'nav.html' %}
+ {% block content %}
+
+
+
+<body>
+
+
+
+    <div class="container">
+         <h3>Customer profile</h3>
+
+
+        <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">field</th>
+      <th scope="col">value</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">name</th>
+      <td>{{ obj.name }}</td>
+
+    </tr>
+<tr>
+      <th scope="row">lastname</th>
+      <td>{{ obj.lname }}</td>
+
+    </tr>
+<tr>
+      <th scope="row">phone</th>
+      <td>{{ obj.phone }}</td>
+
+    </tr>
+<tr>
+    <th scope="row">Email</th>
+      <td>{{ obj.email }}</td>
+
+    </tr>
+    <tr>
+      <th scope="row">description</th>
+      <td>{{ obj.description }}</td>
+
+    </tr>
+    <tr>
+      <th scope="row">payment</th>
+      <td>{{ obj.payment }}</td>
+
+    </tr>
+
+  </tbody>
+</table>
+    </div>
+     <div class="container">
+         <h3>shirt</h3>
+        <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">height</th>
+      <th scope="col">{{ obj.shirtunchi }}</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">chest</th>
+      <td>{{obj.chest}}</td>
+
+    </tr>
+    <tr>
+      <th scope="row">shoulder</th>
+      <td>{{obj.shoulder}}</td>
+
+    </tr>
+    <tr>
+      <th scope="row">astin</th>
+      <td>{{obj.astin}}</td>
+
+    </tr>
+    <tr>
+      <th scope="row">front</th>
+      <td>{{obj.sfront}}</td>
+
+    </tr>
+    <tr>
+      <th scope="row">coller</th>
+      <td>{{obj.coller}}</td>
+
+    </tr>
+    <tr>
+      <th scope="row">cuf</th>
+      <td>{{obj.cuf}}</td>
+
+    </tr>
+
+
+  </tbody>
+</table>
+    </div>
+     <div class="container">
+         <h3>pant</h3>
+        <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">field</th>
+      <th scope="col">size</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">height</th>
+      <td>{{obj.pantunchi}}</td>
+
+    </tr>
+    <tr>
+      <th scope="row">sit</th>
+      <td>{{obj.sit}}</td>
+
+    </tr>
+    <tr>
+      <th scope="row">mandi</th>
+      <td>{{obj.mandi}}</td>
+
+    </tr>
+    <tr>
+      <th scope="row">gudhga</th>
+      <td>{{obj.gudhga}}</td>
+
+    </tr>
+    <tr>
+      <th scope="row">bottom</th>
+      <td>{{obj.bottom}}</td>
+
+    </tr>
+
+
+  </tbody>
+</table>
+    </div>
+ {% endblock %}

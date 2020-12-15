@@ -1,0 +1,22 @@
+{% extends 'nav.html' %}
+ {% block content %}
+
+     <div class="container">
+         <h3>{{ obj.name }}</h3>
+         <h3>{{ obj.lname }}</h3>
+         <form method="POST" action="{% url 'reorder' %}">
+             {% csrf_token %}
+         <input type="hidden" value="{{ obj.id }}" name="pk">
+           <div class="form-group">
+      <label for="formGroupExampleInput2">description</label>
+      <input type="textarea" class="form-control" id="formGroupExampleInput2" name="description" placeholder="Description" >
+    </div>
+<div class="form-group">
+      <label for="formGroupExampleInput2">payment</label>
+      <input type="number" class="form-control" id="formGroupExampleInput2" name="payment" placeholder="Payment" required >
+    </div>
+ <input type="submit" class="btn btn-secondary btn-lg btn-block">
+   </div>
+    </form>
+
+{% endblock %}

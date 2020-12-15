@@ -1,0 +1,132 @@
+{% extends 'nav.html' %}
+ {% block content %}
+
+<br><br>
+<h1>{{ obj.name }} {{ obj.lname }}</h1>
+<div class="container">
+          <button onclick="myFunction()" class="btn btn-primary btn-lg" >
+                delete customer </button>
+    </div>
+<form method="POST" action="{% url 'updatesubmit' %}">
+     {% csrf_token %}
+    <div class="container">
+        <br><br>   
+  
+<h1>profile</h1>
+        <input type="hidden" class="form-control"name="description" value="{{ obj.description }}" id="formGroupExampleInput2" placeholder="Contactnumber" >
+<input type="hidden" class="form-control"name="payment" value="{{ obj.payment }}" id="formGroupExampleInput2" placeholder="Contactnumber" >
+ <input type="hidden" class="form-control"name="name" value="{{ obj.name }}" id="formGroupExampleInput2" placeholder="Contactnumber" >
+         <input type="hidden" class="form-control"name="lname" value="{{ obj.lname }}" id="formGroupExampleInput2" placeholder="Contactnumber" >
+    <div class="form-group">
+      <label for="formGroupExampleInput2">Contact Number</label>
+      <input type="tel" class="form-control"name="phone" value="{{ obj.phone }}" id="formGroupExampleInput2" placeholder="Contactnumber" >
+    </div>
+<div class="form-group">
+      <label for="formGroupExampleInput2">email address</label>
+      <input type="email" class="form-control" name="email" value="{{ obj.email }}" id="formGroupExampleInput2" placeholder="email address">
+    </div>
+       </div>
+   <h1>shirt </h1>
+       <div class="container">
+
+     <div class="row">
+    <div class="col">
+        <label for="formGroupExampleInput">Unchi</label>
+      <input type="text" id="ip" name='shirtunchi' value="{{ obj.shirtunchi }}" class="form-control" placeholder="Unchi" required>
+    </div>
+    <div class="col">
+        <label for="formGroupExampleInput">Chest</label>
+      <input type="text" class="form-control" name="chest" value="{{ obj.chest }}" placeholder="Chest" required>
+    </div>
+  </div>
+     <div class="row">
+    <div class="col">
+         <label for="formGroupExampleInput">Shoulder</label>
+      <input type="text" class="form-control" name="shoulder" value="{{ obj.shoulder }}" placeholder="Shoulder"required>
+    </div>
+    <div class="col">
+          <label for="formGroupExampleInput">Astin</label>
+      <input type="text" class="form-control" name="astin" value="{{ obj.astin }}" placeholder="Astin"required>
+    </div>
+  </div>
+
+     <div class="row">
+
+    <div class="col">
+            <label for="formGroupExampleInput">Front</label>
+      <input type="text" class="form-control" name="front" value="{{ obj.sfront }}" placeholder="Front"required>
+    </div>
+
+    <div class="col">
+            <label for="formGroupExampleInput">Coller</label>
+      <input type="text" class="form-control" name="coller" value="{{ obj.coller }}" placeholder="Coller" required>
+    </div>
+  </div>
+     <div class="row">
+    <div class="col">
+            <label for="formGroupExampleInput">Cuf</label>
+      <input type="text" class="form-control" name="cuf" value="{{ obj.cuf }}" placeholder="Cuf" required>
+    </div>
+    <div class="col">
+
+      <input type="hidden" class="form-control"   placeholder="Last name" required>
+    </div>
+  </div>
+       </div>
+   <h1>pant</h1>
+  <div class="container">
+
+     <div class="row">
+    <div class="col">
+        <label for="formGroupExampleInput">Height</label>
+      <input type="text" id="ip" value="{{ obj.pantunchi }}" name="pantunchi" class="form-control" placeholder="Height" required>
+    </div>
+    <div class="col">
+        <label for="formGroupExampleInput">Kambar</label>
+      <input type="text" class="form-control" value="{{ obj.kambar }}" name="kambar" placeholder="Kambar" required>
+    </div>
+  </div>
+     <div class="row">
+    <div class="col">
+         <label for="formGroupExampleInput">sit</label>
+      <input type="text" class="form-control" value="{{ obj.sit }}" name="sit" placeholder="Sit" required>
+    </div>
+    <div class="col">
+          <label for="formGroupExampleInput">Mandi</label>
+      <input type="text" class="form-control" value="{{ obj.mandi }}" name="mandi" placeholder="Mandi" required>
+    </div>
+  </div>
+
+     <div class="row">
+
+    <div class="col">
+            <label for="formGroupExampleInput">Gudhga</label>
+      <input type="text" class="form-control" value="{{ obj.gudhga }}" name="gudhga" placeholder="Gudhga" required>
+    </div>
+
+    <div class="col">
+            <label for="formGroupExampleInput">Bottom</label>
+      <input type="text " class="form-control" value="{{ obj.bottom }}" name="bottom" placeholder="Bottom" required>
+    </div>
+  </div>
+
+       </div>
+
+
+
+
+<div class="container">
+     <input type="submit" class="btn btn-secondary btn-lg btn-block">
+  </form>
+
+
+
+
+<script>
+function myFunction() {
+  if (confirm("do you want to delete")){
+ window.location="{% url 'delcust' pk=obj.id %}";
+}
+}
+</script>
+   {% endblock %}

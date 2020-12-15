@@ -1,0 +1,123 @@
+{% extends 'nav.html' %}
+ {% block content %}
+   <h1>create a new user</h1>
+   <div class="container">
+<form method="POST" action="{% url 'newforms' %}">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="formGroupExampleInput">First Name</label>
+      <input type="text" class="form-control" name="name" id="formGroupExampleInput" placeholder="Firstname" required>
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput2">Last Name</label>
+      <input type="text" class="form-control" name="lname" id="formGroupExampleInput2" placeholder="Lastname" required>
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput2">Contact Number</label>
+      <input type="tel" class="form-control"name="phone" id="formGroupExampleInput2" placeholder="Contactnumber" >
+    </div>
+<div class="form-group">
+      <label for="formGroupExampleInput2">email address</label>
+      <input type="email" class="form-control" name="email" id="formGroupExampleInput2" placeholder="email address">
+    </div>
+       </div>
+   <h1>shirt </h1>
+       <div class="container">
+
+     <div class="row">
+    <div class="col">
+        <label for="formGroupExampleInput">Unchi</label>
+      <input type="text" id="ip" name='shirtunchi' class="form-control" placeholder="Unchi" required>
+    </div>
+    <div class="col">
+        <label for="formGroupExampleInput">Chest</label>
+      <input type="text" class="form-control" name="chest" placeholder="Chest" required>
+    </div>
+  </div>
+     <div class="row">
+    <div class="col">
+         <label for="formGroupExampleInput">Shoulder</label>
+      <input type="text" class="form-control" name="shoulder" placeholder="Shoulder"required>
+    </div>
+    <div class="col">
+          <label for="formGroupExampleInput">Astin</label>
+      <input type="text" class="form-control" name="astin" placeholder="Astin"required>
+    </div>
+  </div>
+
+     <div class="row">
+
+    <div class="col">
+            <label for="formGroupExampleInput">Front</label>
+      <input type="text" class="form-control" name="front" placeholder="Front"required>
+    </div>
+
+    <div class="col">
+            <label for="formGroupExampleInput">Coller</label>
+      <input type="text" class="form-control" name="coller" placeholder="Coller" required>
+    </div>
+  </div>
+     <div class="row">
+    <div class="col">
+            <label for="formGroupExampleInput">Cuf</label>
+      <input type="text" class="form-control" name="cuf" placeholder="Cuf" required>
+    </div>
+    <div class="col">
+
+      <input type="hidden" class="form-control"  placeholder="Last name" required>
+    </div>
+  </div>
+       </div>
+   <h1>pant</h1>
+  <div class="container">
+
+     <div class="row">
+    <div class="col">
+        <label for="formGroupExampleInput">Height</label>
+      <input type="text" id="ip" name="pantunchi" class="form-control" placeholder="Height" required>
+    </div>
+    <div class="col">
+        <label for="formGroupExampleInput">Kambar</label>
+      <input type="text" class="form-control" name="kambar" placeholder="Kambar" required>
+    </div>
+  </div>
+     <div class="row">
+    <div class="col">
+         <label for="formGroupExampleInput">sit</label>
+      <input type="text" class="form-control" name="sit" placeholder="Sit" required>
+    </div>
+    <div class="col">
+          <label for="formGroupExampleInput">Mandi</label>
+      <input type="text" class="form-control" name="mandi" placeholder="Mandi" required>
+    </div>
+  </div>
+
+     <div class="row">
+
+    <div class="col">
+            <label for="formGroupExampleInput">Gudhga</label>
+      <input type="text" class="form-control" name="gudhga" placeholder="Gudhga" required>
+    </div>
+
+    <div class="col">
+            <label for="formGroupExampleInput">Bottom</label>
+      <input type="text" class="form-control" name="bottom" placeholder="Bottom" required>
+    </div>
+  </div>
+
+       </div>
+   <div class="container">
+           <div class="form-group">
+      <label for="formGroupExampleInput2">description</label>
+      <input type="textarea" class="form-control"  name="description" id="formGroupExampleInput2" placeholder="Description" >
+    </div>
+<div class="form-group">
+      <label for="formGroupExampleInput2">payment</label>
+      <input type="number" class="form-control" name="payment" id="formGroupExampleInput2" placeholder="Payment" required >
+    </div>
+ <input type="submit" class="btn btn-secondary btn-lg btn-block">
+   </div>
+
+
+  </form>
+   {% endblock %}

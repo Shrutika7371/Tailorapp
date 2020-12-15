@@ -1,0 +1,37 @@
+
+{% extends 'nav.html' %}
+ {% block content %}
+  <div class="table-responsive-md">
+    <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">first name</th>
+      <th scope="col">last name</th>
+          <th scope="col">status</th>
+      <th scope="col">contact no.</th>
+      <th scope="col">view</th>
+         <th scope="col">make order</th>
+      <th scope="col">update/delete</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for i in obj %}
+    <tr>
+
+      <td>{{i.name}}</td>
+      <td>{{i.lname}}</td>
+        <td>{{ i.status}} <br>
+            {{i.date}}
+        </td>
+      <td>{{i.phone}}</td>
+      <td><a class="btn btn-primary btn-lg" href="{% url 'showc' pk=i.id %}" role="button">view</a></td>
+       <td><a class="btn btn-primary btn-lg" href="{% url 'olduc' pk=i.id %}" role="button">order</a></td>
+      <td><a class="btn btn-primary btn-lg" href="{% url 'updateform' pk=i.id %}" role="button">upate/delete </a></td>
+
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+  </div>
+
+{% endblock %}
